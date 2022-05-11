@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherApp</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+
+<body>
+
+    <div class="container">
+        <div class="pre-text">
+            <span class="let1">W</span>
+            <span class="let2">E</span>
+            <span class="let3">A</span>
+            <span class="let4">T</span>
+            <span class="let5">H</span>
+            <span class="let6">E</span>
+            <span class="let7">R</span>
+        </div>
+    </div>
+    <main class="background bg-animation">
+
+        <div class="fixed">
+            <div class="vertical" id="vertical">
+                <div>
+                    <h1 class="vertical-info"></h1>
+                </div>
+
+            </div>
+            <br><br>
+            <div class="header">
+
+                <div class="style">
+
+                    <div class="nav1"></div>
+                    <div style="display: flex;">
+                        <div class="nav-2"></div>
+                        <div class="nav2"></div>
+                    </div>
+
+                    <div class="nav3"></div>
+                </div>
+                <div class="logo">
+                    <img src="images/main.png" alt="">
+                </div>
+
+            </div>
+            <div class="side-nav">
+                <ul class="side-nav-bottom">
+                    <li>Temperature Unit</li>
+
+                    <ul class="temp-unit">
+                        <li class="listActive">Celsius</li>
+                        <li>Fahrenheit</li>
+                        <li>Kelvin</li>
+                    </ul>
+                    <li>Speed Unit</li>
+
+                    <ul class="speed-unit">
+                        <li class="listActive">Km/hr</li>
+                        <li>m/sec</li>
+                        <li>Knots</li>
+                    </ul>
+                </ul>
+                <div class="side-nav-logo">
+                    <h1 class="ID">Developed by</h1>
+                    <img src="images/logo.png" alt="">
+                    <a href="https://harvansh-1234.github.io/portfolio/" target="_blank">Explore</a>
+                </div>
+
+            </div>
+            <div class="search">
+
+                <form id="search" action="">
+                    <input type="search" placeholder="city" id="search-input" required autocomplete="off" />
+                    <br>
+                    <button id="search-button"><img src="./images/search-w.png" alt=""></button>
+                </form>
+            </div>
+            <div class="location">
+                <h2 class="location-detail">City Name</h2>
+                <div class="icon">
+                    <img src="images/icon-clear-w.png" alt="" width="90px">
+                </div>
+            </div>
+            <div class="temperature">
+                <div class="temperature-detail">
+                    <h2 class="temperature-degree">--</h2>
+                    <span><sup>o</sup>C</span>
+                </div>
+                <h2 class="decp"></h2>
+            </div>
+
+
+            <div>
+                <h1 class="day">
+
+                </h1>
+            </div>
+
+        </div>
+        <div class="card-container">
+            <div id="card" class="card1 fade-toggle">
+                <img src="images/humidity.png" alt="" class="card-image">
+                <div class="card-info">
+
+                    <div class="card-border"></div>
+                    <h1 class="shift">Humidity</h1>
+                    <div style="display: flex;" class="shift">
+                        <h1 class="card-info-humidity">--</h1>
+                        <div class="card-border-x-1"></div>
+
+                        <h1><span>%</span></h1>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="card" class="float-right card2 fade-toggle">
+                <div class="card-image float-right-image">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 114 130">
+                        <g id="Group_13" data-name="Group 13" transform="translate(-1130 -557)">
+                            <g id="Ellipse_4" data-name="Ellipse 4" transform="translate(1130 573)" fill="none"
+                                stroke="var(--font-color)" stroke-width="12">
+                                <circle cx="57" cy="57" r="57" stroke="none" />
+                                <circle cx="57" cy="57" r="51" fill="none" />
+                            </g>
+                            <g id="Union_1" data-name="Union 1" transform="translate(1199.353 557) rotate(20)"
+                                fill="var(--font-color)">
+                                <path
+                                    d="M 13.73209285736084 86.96831512451172 C 10.19708156585693 86.96831512451172 6.873837471008301 85.59981536865234 4.374537467956543 83.11489105224609 C 1.876004099845886 80.63074493408203 0.5000041127204895 77.32807922363281 0.5000041127204895 73.81526947021484 C 0.5000041127204895 71.16392517089844 1.289970755577087 68.60854339599609 2.784492969512939 66.42539978027344 C 4.244281768798828 64.29301452636719 6.278081893920898 62.64542388916016 8.66602611541748 61.66075897216797 L 8.838248252868652 61.58973693847656 L 8.922015190124512 61.42334747314453 L 38.05149459838867 3.561449766159058 L 25.18083763122559 66.96551513671875 L 25.14336013793945 67.15015411376953 L 25.2370491027832 67.31361389160156 C 26.3668155670166 69.28472137451172 26.96398162841797 71.532958984375 26.96398162841797 73.81526947021484 C 26.96398162841797 77.32807159423828 25.58798217773438 80.6307373046875 23.08946990966797 83.11489105224609 C 20.5901927947998 85.59981536865234 17.26701545715332 86.96831512451172 13.73209285736084 86.96831512451172 Z"
+                                    stroke="none" />
+                                <path
+                                    d="M 13.73209095001221 86.46832275390625 C 17.13399696350098 86.46832275390625 20.33198547363281 85.15146636962891 22.7369384765625 82.76033782958984 C 25.14036178588867 80.37071990966797 26.46398544311523 77.1939697265625 26.46398544311523 73.81527709960938 C 26.46398544311523 71.62004089355469 25.88971519470215 69.45777893066406 24.80325508117676 67.56226348876953 L 24.61586761474609 67.23533630371094 L 36.81836318969727 7.122855663299561 L 9.201067924499512 61.9809684753418 L 8.856620788574219 62.12299346923828 C 6.558820247650146 63.07049942016602 4.601785182952881 64.65591430664062 3.197079181671143 66.70785522460938 C 1.759738087654114 68.80744934082031 0.9999969601631165 71.26516723632812 0.9999969601631165 73.81527709960938 C 0.9999969601631165 77.19397735595703 2.32363224029541 80.37071990966797 4.727067470550537 82.76032257080078 C 7.132055759429932 85.15146636962891 10.33009147644043 86.46832275390625 13.73209095001221 86.46832275390625 M 13.73209095001221 87.46832275390625 C 6.147984981536865 87.46832275390625 -3.056784180444083e-06 81.35573577880859 -3.056784180444083e-06 73.81527709960938 C -3.056784180444083e-06 68.12648773193359 3.499961614608765 63.25014495849609 8.475408554077148 61.19850921630859 L 39.2846565246582 4.621079369826475e-06 L 25.67084312438965 67.06497955322266 C 26.81190299987793 69.05575561523438 27.46398544311523 71.36000823974609 27.46398544311523 73.81527709960938 C 27.46398544311523 81.35573577880859 21.31599617004395 87.46832275390625 13.73209095001221 87.46832275390625 Z"
+                                    stroke="none" fill="var(--font-color)" />
+                            </g>
+                        </g>
+                    </svg>
+
+                </div>
+                <div class="card-info">
+                    <div class="card-border"></div>
+
+                    <h1 class="shift">Pressure</h1>
+                    <div style="display: flex;" class="shift">
+                        <h1 class="card-info-pressure">--</h1>
+                        <div class="card-border-x-2"></div>
+                        <h1><span>hPa</span></h1>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="card" class="card3 fade-toggle">
+                <div class="card-image card-image-wind">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 119.436 159.072">
+                        <g id="windmill" transform="translate(40.006 -0.006)">
+                            <path id="Path_10" data-name="Path 10"
+                                d="M44.536,64.3a11.277,11.277,0,0,1,2.253,1.049,13.068,13.068,0,0,1,6.978-9.943,12.15,12.15,0,0,1-1.541-1.515,11.943,11.943,0,0,1-1.7-2.641c-1.761-3.741-1.243-7.211-.7-10.771.117-.738.22-1.476.246-1.7L54.53,4.84c.013-.065.013-.117.026-.168h0A5.79,5.79,0,0,1,57.417.62,4.991,4.991,0,0,1,60.006.011,4.91,4.91,0,0,1,62.57.853a6.153,6.153,0,0,1,2.55,4.492.98.98,0,0,1,.013.194l4.7,37.362h.013a20.159,20.159,0,0,1,.026,6.175,10.031,10.031,0,0,1-3.547,6.072c-.155.129-.311.259-.466.375A13.218,13.218,0,0,1,68.926,57.8a13.085,13.085,0,0,1,3.793,8.35A11.03,11.03,0,0,1,75.852,65.1,12.773,12.773,0,0,1,79,64.948c4.1.337,6.861,2.524,9.671,4.764.466.375.932.751,1.346,1.062l27.2,20.8a1.166,1.166,0,0,1,.129.117h0a5.827,5.827,0,0,1,2.084,4.505,4.924,4.924,0,0,1-2.783,4.35,6.12,6.12,0,0,1-5.14-.039v.013L76.6,85.856a19.936,19.936,0,0,1-5.373-3.068,10.011,10.011,0,0,1-3.392-5.593c-.285.233-.6.453-.906.66l9.218,62.814H94.132a3.567,3.567,0,0,1,2.5,1.036l.013.013h0a3.567,3.567,0,0,1,1.036,2.5v11.328a3.567,3.567,0,0,1-1.036,2.5h0a3.56,3.56,0,0,1-2.486,1.036H25.3a3.567,3.567,0,0,1-2.5-1.036h0a3.56,3.56,0,0,1-1.036-2.486V144.229a3.567,3.567,0,0,1,1.036-2.5l.013-.013h0a3.567,3.567,0,0,1,2.5-1.036h17.93L51.2,78.075a2.21,2.21,0,0,1,.259-.971c-.194-.155-.375-.324-.557-.492-.039.142-.091.285-.129.427a12.317,12.317,0,0,1-1.385,2.809c-2.291,3.444-5.541,4.79-8.855,6.175-.583.246-1.178.492-1.579.673L7.575,100.42c-.052.026-.1.039-.155.065h0a5.845,5.845,0,0,1-4.958-.35A4.962,4.962,0,0,1,.6,98.232,4.892,4.892,0,0,1,0,95.6,6.16,6.16,0,0,1,2.526,91.1c.052-.039.091-.065.142-.1L32.237,67.654a19.816,19.816,0,0,1,5.282-3.224,10,10,0,0,1,7.017-.129ZM62.6,80.483H55.618l-7.7,60.173H71.476L62.6,80.483ZM26.411,145.317v9.114H93.018v-9.114ZM65.638,61.077a8.408,8.408,0,1,0,2.447,5.929,8.355,8.355,0,0,0-2.447-5.929ZM61.909,52.52a6.321,6.321,0,0,0,1.437-.932A5.554,5.554,0,0,0,65.3,48.209a15.583,15.583,0,0,0-.078-4.764h.013l-4.7-37.336c-.013-.065-.026-.142-.039-.207a1.607,1.607,0,0,0-.518-1.2.3.3,0,0,0-.168-.065.365.365,0,0,0-.194.052,1.238,1.238,0,0,0-.518.88L54.66,39.393c-.129.945-.181,1.359-.246,1.787-.427,2.848-.854,5.644.3,8.091a7.914,7.914,0,0,0,1.036,1.644,5.814,5.814,0,0,0,2.887,1.916,4.683,4.683,0,0,0,3.275-.311ZM72.2,74.178a6.308,6.308,0,0,0,.091,1.7,5.59,5.59,0,0,0,1.955,3.392,15.538,15.538,0,0,0,4.156,2.3l34.9,14.642v.013h0a1.694,1.694,0,0,0,1.32.155.283.283,0,0,0,.129-.117.3.3,0,0,0,.052-.181,1.358,1.358,0,0,0-.5-.893L87.193,74.463c-.518-.4-.971-.764-1.424-1.113-2.253-1.8-4.453-3.547-7.172-3.767a7.947,7.947,0,0,0-1.942.078A5.807,5.807,0,0,0,73.548,71.2,4.633,4.633,0,0,0,72.2,74.178ZM44.588,69.44a6.079,6.079,0,0,0-1.541-.738,5.606,5.606,0,0,0-3.91.065,16.147,16.147,0,0,0-4.026,2.512L5.556,94.633c-.052.039-.091.078-.142.117-.518.414-.751.777-.764,1.062a.324.324,0,0,0,.039.168.448.448,0,0,0,.129.142,1.25,1.25,0,0,0,1.023-.013l31.252-13.7c.673-.3,1.165-.5,1.657-.7,2.667-1.1,5.269-2.188,6.771-4.44a7.582,7.582,0,0,0,.867-1.748,5.817,5.817,0,0,0,.155-3.47,4.8,4.8,0,0,0-1.955-2.615Z"
+                                transform="translate(-40 0)" fill="var(--font-color)" />
+                        </g>
+                    </svg>
+
+                </div>
+                <div class="card-info">
+                    <div class="card-border"></div>
+
+                    <h1 class="shift">Wind</h1>
+                    <div style="display: flex;" class="shift">
+                        <h1 class="card-info-wind">--</h1>
+                        <div class="card-border-x"></div>
+                        <h1><span>Km/hr</span></h1>
+                    </div>
+
+                </div>
+            </div>
+            <div class="space">
+
+            </div>
+        </div>
+
+
+    </main>
+
+
+    <script src="index.js"></script>
+
+</body>
+<script>
+
+    $(window).on('load', function () {
+        setTimeout(() => {
+                let2.classList.add('let2S1');
+            
+            }, 500)
+            setTimeout(() => {
+                let2.classList.add('let2S2');
+            
+            }, 1000)
+            setTimeout(() => {
+                let2.classList.add('let2S3');
+            
+            }, 1500)
+            setTimeout(() => {
+                let1.classList.add('let1S1');
+            
+            }, 2000)
+            setTimeout(() => {
+                let4.classList.add('let4S1');
+            
+            }, 2500)
+            
+            setTimeout(() => {
+                let3.classList.add('let3S1');
+            
+            }, 3000)
+            setTimeout(() => {
+                let5.classList.add('let5S1');
+            
+            }, 3500)
+            setTimeout(() => {
+                let5.classList.add('let5S2');
+            
+            }, 4000)
+            setTimeout(() => {
+                let5.classList.add('let5S3');
+            
+            }, 4500)
+            setTimeout(() => {
+                let6.classList.add('let6S1');
+            
+            }, 5000)
+            setTimeout(() => {
+                let7.classList.add('let7S1');
+            
+            }, 5500)
+            setTimeout(() => {
+                $('.container').fadeOut('slow');
+            }, 6000);
+            
+
+    });
+
+</script>
+
+</html>
